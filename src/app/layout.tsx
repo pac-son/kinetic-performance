@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import MobileNav from "@/components/layout/MobileNav";
+
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
@@ -38,11 +42,17 @@ export default function RootLayout({
         `}</style>
       </head>
       <body
-        className={`${bebasNeue.variable} ${hankenGrotesk.variable} font-body-md bg-background text-on-background min-h-screen`}
+        className={`${bebasNeue.variable} ${hankenGrotesk.variable} antialiased`}
       >
-        {/* We will inject <TopAppBar /> here in Phase 2 */}
-        {children}
-        {/* We will inject <Footer /> and <MobileBottomNav /> here in Phase 2 */}
+        <Navbar />
+        {/* Main content wrapper pushes footer down and accounts for fixed navs */}
+        <div className="flex flex-col min-h-screen">
+          <main className="grow pt-16">
+            {children}
+          </main>
+          <Footer />
+        </div>
+        <MobileNav />
       </body>
     </html>
   );
