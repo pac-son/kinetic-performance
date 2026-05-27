@@ -99,7 +99,7 @@ export default function BookingsPage() {
             <div className="space-y-4 animate-in fade-in duration-500">
               {upcomingSessions.map((session) => (
                 <div key={session.id} className="glass-card p-6 md:p-8 rounded-xl flex flex-col md:flex-row justify-between md:items-center gap-6 border-l-4 border-l-primary-fixed-dim hover:border-l-primary-container transition-colors">
-                  <div className="space-y-4 flex-grow">
+                  <div className="space-y-4 grow">
                     <div className="flex items-center gap-3">
                       <span className={`font-label-md text-[10px] px-2 py-1 rounded uppercase tracking-widest ${
                         session.status === 'CONFIRMED' ? 'bg-secondary-container/20 text-secondary-fixed-dim' : 'bg-surface-variant text-on-surface'

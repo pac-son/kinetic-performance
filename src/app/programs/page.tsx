@@ -5,14 +5,14 @@ export default function ProgramsPage() {
     <div className="pt-16 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
       
       {/* Hero Section */}
-      <section className="relative h-100 md:h-125 rounded-xl overflow-hidden mb-gutter group mt-8 md:mt-12">
+      <section className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden mb-gutter group mt-8 md:mt-12">
         <div className="absolute inset-0 z-0">
           <img
             alt="Remote Training"
             className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbgFeykuCWnr9OsCnWFT7nrPlsQLmncpiMW8FfPnZ7cNc12d-VWStYsz0PPJ-Ljsg0MOsO82KvNXYHSfIedLIugjoqFmXwHfhP-FhwnKsQQWGA-ySZsFWFgOBB3FkCbP9r6HZxw-5yq0Gy6sU2F3G72jXZ4OMxcqynSq7L8WsDTU67mq35FtRByJ1BKu2Xm8ihbVzUOCgOx5ZXHXgUZJ66yP2Gp5tNWcoGIBJrPHURvcD9xZWmBwOZenkDM2KVCINALtPLB5MgQrTG"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
         </div>
         
         <div className="relative z-10 flex flex-col justify-center h-full max-w-2xl px-6 md:px-12">
@@ -26,12 +26,13 @@ export default function ProgramsPage() {
             Professional-grade training delivered through a high-performance digital interface. No excuses, just technical precision and focused energy.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-primary-container text-on-primary-container px-8 py-3 font-label-md rounded hover:opacity-90 transition-all active:scale-95 glow-shadow-primary h-12 uppercase tracking-widest">
+            <button className="bg-primary-container text-on-primary-container px-8 py-3 font-label-md rounded hover:opacity-90 transition-all active:scale-95 glow-shadow-primary h-[48px] uppercase tracking-widest">
               Start Training
             </button>
-            <button className="border border-outline-variant text-primary px-8 py-3 font-label-md rounded hover:bg-surface-variant transition-all h-12 uppercase tracking-widest">
+            {/* UPDATED: Converted button to Next.js Link pointing to /pricing */}
+            <Link href="/pricing" className="flex items-center justify-center border border-outline-variant text-primary px-8 py-3 font-label-md rounded hover:bg-surface-variant transition-all h-[48px] uppercase tracking-widest">
               View Plans
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -120,7 +121,7 @@ export default function ProgramsPage() {
             </div>
             
             {/* Subtle BG Graphic */}
-            <div className="absolute bottom-5 right-5 opacity-[0.03] pointer-events-none">
+            <div className="absolute bottom-[-20px] right-[-20px] opacity-[0.03] pointer-events-none">
               <span className="material-symbols-outlined text-[150px]">fitness_center</span>
             </div>
           </div>
@@ -142,7 +143,7 @@ export default function ProgramsPage() {
         {/* Program Overview (Lower Row) */}
         <div className="col-span-1 lg:col-span-12 glass-card p-6 md:p-8 rounded-xl">
           <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="w-full md:w-48 h-48 rounded-xl overflow-hidden shrink-0 group">
+            <div className="w-full md:w-48 h-48 rounded-xl overflow-hidden flex-shrink-0 group">
               <img
                 alt="Program Focus"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -154,7 +155,7 @@ export default function ProgramsPage() {
                 <span className="text-secondary-container font-label-md text-xs tracking-widest uppercase">
                   Enrolled Program
                 </span>
-                <div className="h-px bg-outline-variant flex-1 hidden md:block max-w-50"></div>
+                <div className="h-px bg-outline-variant flex-1 hidden md:block max-w-[200px]"></div>
               </div>
               <h3 className="font-display-lg-mobile md:font-headline-xl text-primary mb-2 uppercase">
                 Industrial Strength 4.0
